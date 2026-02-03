@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts Manager</title>
+    <script src="main.js" defer></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 600px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        .deleted {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Posts List</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>VIEWS</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody id="table_body"></tbody>
+    </table>
+
+    <h3>Add / Edit Post</h3>
+
+    <div>
+        <!-- ID để trống khi tạo mới -->
+        <input type="text" id="txt_id" placeholder="id (để trống khi tạo mới)" />
+        <input type="text" id="txt_title" placeholder="title" />
+        <input type="number" id="txt_views" placeholder="views" />
+        <input type="button" value="Save" onclick="Save()" />
+    </div>
+
+</body>
+</html>
